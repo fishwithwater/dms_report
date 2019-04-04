@@ -1,0 +1,12 @@
+<!--components/navi-title/index.wxml-->
+<view class='navi-title'>
+  <view class="title-left">
+    <view class="line"></view>
+    <text>{{title}}</text>
+  </view>
+  <block wx:if='{{showStatus}}'>
+    <view class="count" style="background:{{status?'#dfedff':'#fca09f'}}">
+      <text></text>
+    </view>
+  </block>
+</view>

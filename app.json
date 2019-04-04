@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#bbbbbb",
+    "selectedColor": "#3963BC",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "申报",
+        "iconPath": "/images/tabbar/base.png",
+        "selectedIconPath": "/images/tabbar/base-select.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/images/tabbar/team.png",
+        "selectedIconPath": "/images/tabbar/team-select.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "l-icon": "/components/icon/index",
+    "l-button": "/components/button/index",
+    "l-input":"/components/input/index",
+    "content-card": "/components/content-card/index"
+  }
+
+}

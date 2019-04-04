@@ -1,0 +1,50 @@
+<!--index.wxml-->
+<view class="container">
+  <content-card class="content" name="申报维修">
+    <view class='buttun-wrapper'>
+      <l-input label="地址" placeholder="点击右侧定位" label-width="170" value="{{address}}">
+        <view slot="right">
+          <l-button special="true"  bindtap='onGetLocation'>
+            <view class="share-box">
+              <l-icon size="40" name="address" color="#3963bc" />
+            </view>
+          </l-button>
+        </view>
+      </l-input>
+      <picker bindchange="selectFixContent" value="{{fixContentIndex}}" range="{{fixContentRange}}">
+        <l-input disabled='{{true}}' label="抢修内容" placeholder='点击选择抢修内容' label-width='170' value='{{fixContentRange[fixContentIndex]}}'>
+        </l-input>
+      </picker>
+      <picker mode="date" bindchange='selectFixDate'>
+        <l-input disabled='{{true}}' label="抢修日期" placeholder='点击选择抢修日期' label-width='170' value='{{date}}'>
+        </l-input>
+      </picker>
+      <picker mode="time" bindchange='selectFixTime'>
+        <l-input disabled='{{true}}' label="抢修时间" placeholder='点击选择抢修时间' label-width='170' value='{{time}}'>
+        </l-input>
+      </picker>
+      <picker bindchange="selectBreakContent" value="{{breakContentIndex}}" range="{{breakContentRange}}">
+        <l-input disabled='{{true}}' label="损坏情况" placeholder='点击选择损坏情况' label-width='170' value='{{breakContentRange[breakContentIndex]}}'>
+        </l-input>
+      </picker>
+      <l-input label="维修方案" placeholder="备注" label-width="170">
+      </l-input>
+      <picker bindchange="selectReasonContent" value="{{reasonContentIndex}}" range="{{reasonContentRange}}">
+        <l-input disabled='{{true}}' label="原因分析" placeholder='点击选择原因' label-width='170' value='{{reasonContentRange[reasonContentIndex]}}'>
+        </l-input>
+      </picker>
+      <picker bindchange="selectMaterialContent" value="{{materialContentIndex}}" range="{{materialContentRange}}">
+        <l-input disabled='{{true}}' label="材质" placeholder='点击选择材质' label-width='170' value='{{materialContentRange[materialContentIndex]}}'>
+        </l-input>
+      </picker>
+      <l-input label="管径(mm)" placeholder="请输入管径" label-width="170">
+      </l-input>
+      <l-input label="埋深(m)" placeholder="请输入埋深" label-width="170">
+      </l-input>
+    </view>
+    <view class="content" style="margin-top:20rpx;">
+      <l-button size="large" shape="semicircle" >提交</l-button>
+    </view>
+  </content-card>
+</view>
+<l-toast />

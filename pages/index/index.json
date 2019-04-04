@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#3963BC",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "申报维修",
+  "disableScroll": true,
+  "usingComponents": {
+    
+  }
+}
